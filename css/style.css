@@ -1,0 +1,286 @@
+:root {
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+
+p{
+    font-size: 2rem;
+    color: #888787;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 2rem 0;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+@media (min-width: 970px) { 
+    .header {
+        padding: 4rem 0;
+    }
+}
+
+.contenedor__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 970px) { 
+    .contenedor__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.logo{
+    margin-bottom: 4rem;
+}
+@media (min-width: 970px) { 
+    .logo{
+        margin-bottom: 0;
+    }
+}
+
+.logo img {
+    width: 25rem;
+}
+@media (min-width: 970px) { 
+    .logo img {
+        width: 20rem;
+    }
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 970px) { 
+    .navegacion {
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+
+.navegacion a {
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom:1rem;
+}
+
+.navegacion a:last-child{
+    margin-bottom: 0;
+}
+
+@media (min-width: 970px) { 
+    .navegacion a {
+        margin-bottom: 0;
+    }
+}
+
+.navegacion a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: 0.3s;
+}
+
+.navegacion a:hover::after {
+    width: 100%;
+}
+
+.contenido-principal {
+    margin-top: 10rem;
+}
+
+@media (min-width: 970px) { 
+    .contenido-principal {
+        margin-top: 20rem;
+    }
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+}
+@media (min-width: 970px) { 
+    .heading {
+        font-size: 6rem;
+    }
+    
+}
+
+.info-curso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading__info {
+    text-align: center;
+    margin-top: 4rem;
+    max-width: 60rem;
+    margin: 4rem auto;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+
+@media (min-width: 970px) { 
+    .botones {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+}
+
+.boton {
+    padding: 1.5rem 4rem;
+    background-color: rgb(17, 24, 40);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+    transition: 0.3s, color 0.3s;
+}
+
+.boton__primario {
+    background-color: inherit;
+    color: #000;
+}
+
+.boton__primario:hover {
+    background-color: rgb(17, 24, 40);
+    color: #fff;
+}
+
+.boton__secundario:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.recursos{
+    margin-top: 20rem;
+}
+
+.recursos__info{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.recursos__heading{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.recursos__texto {
+    text-align: center;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.recursos__grid{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 970px) { 
+    .recursos__grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.recurso{
+    text-align: center;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #cbcbcb;
+    padding-bottom: 4rem;
+}
+
+.recurso:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+@media (min-width: 970px) { 
+    .recurso{
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.recurso__heading{
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+.recurso img{
+    height: 30rem;
+    background-color: rgb(234, 234, 234);
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.boton-cursos{
+    margin-top: 4rem;
+    text-align: center;
+    width: max-content;
+    margin: 4rem auto;
+    background-color: #fff;
+    color: black;
+}
+
+.boton-cursos:hover{
+    background-color: rgb(17, 24, 40);
+    color: #fff;
+}
